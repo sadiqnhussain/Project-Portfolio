@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  Project — MyPortfolio
+{% endblock %}
+{% block content %}
+  <section class="page-hero shell">
+    <p class="eyebrow" id="projectCategory">PROJECT</p><h1 id="projectTitle">Loading project…</h1><p id="projectSummary" class="lede"></p>
+    <div class="actions" id="projectLinks"></div>
+  </section>
+  <section class="shell detail-grid section">
+    <article class="panel detail-card">
+      <img id="projectCover" class="detail-cover" alt="" hidden /><section>
+        <h2>Overview</h2><p id="projectDescription" class="long-copy"></p>
+      </section>
+      <section>
+        <h2>Architecture</h2><p id="projectArchitecture" class="long-copy"></p><img id="architectureDiagram" class="architecture-diagram" alt="Architecture diagram" hidden />
+      </section>
+      <section>
+        <h2>Achievements</h2><p id="projectAchievements" class="long-copy"></p>
+      </section>
+      <section>
+        <h2>Challenges</h2><p id="projectChallenges" class="long-copy"></p>
+      </section>
+      <section>
+        <h2>Solutions</h2><p id="projectSolutions" class="long-copy"></p>
+      </section>
+    </article>
+    <aside class="detail-side">
+      <div class="panel detail-card">
+        <p class="eyebrow">TECH STACK</p>
+        <div id="projectStack" class="stack"></div>
+      </div>
+      <div class="panel detail-card">
+        <p class="eyebrow">API LAB</p><h3>Inspect the backend lifecycle.</h3><p>Run this project through the interactive request pipeline.</p><a class="btn btn-primary" href="/api-lab/">Open API Lab →</a>
+      </div>
+      <div class="project-health-rail">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">LIVE SYSTEM HEALTH</p><h3>Deployment telemetry</h3>
+          </div><span id="detail-health-time" class="updated">Polling live deployment…</span>
+        </div>
+        <div id="detail-health-grid" class="health-grid"></div>
+      </div>
+    </aside>
+  </section>
+{% endblock %}
+{% block scripts %}
+  <script id="projectSlug" type="application/json">
+    '{{ project_slug|escapejs }}'
+  </script>
+  <script src="{% static 'js/project-detail.js' %}" defer></script>
+{% endblock %}

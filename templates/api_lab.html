@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  API Lab — MyPortfolio
+{% endblock %}
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/apps/projects/projects.css' %}" />
+{% endblock %}
+{% block content %}
+  <section class="page-hero shell">
+    <div class="eyebrow">Interactive API laboratory</div><h1>Send a request through the backend lifecycle.</h1><p>Select a showcase project, shape a payload, and inspect the validation → service → serialization pipeline.</p>
+  </section>
+  <section class="shell sandbox-section">
+    <div class="sandbox-grid">
+      <form id="sandbox-form" class="panel sandbox-form">
+        <label>Project<select id="project-select" required></select></label><label>
+          Method<select id="method-select">
+            <option>POST</option>
+            <option>PUT</option>
+            <option>PATCH</option>
+            <option>GET</option>
+          </select>
+        </label><label>JSON payload<textarea id="payload-input" spellcheck="false">{ "name": "backend-engineer", "intent": "build something reliable" }</textarea></label><button class="btn btn-primary" type="submit">Run sandbox →</button><div id="sandbox-error" class="error"></div>
+      </form>
+      <div class="panel result-panel">
+        <div class="result-heading">
+          <span>Execution trace</span><span id="result-time">READY</span>
+        </div>
+        <div id="result-output" class="trace-empty">Run a request to inspect the lifecycle.</div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+{% block scripts %}
+  <script src="{% static 'js/apps/projects/sandbox.js' %}" defer></script>
+{% endblock %}

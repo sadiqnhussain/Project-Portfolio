@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  Projects — MyPortfolio
+{% endblock %}
+{% block content %}
+  <section class="page-hero shell">
+    <div class="eyebrow">Selected systems</div><h1>Projects as technical case studies.</h1><p>Explore the architecture, engineering decisions, outcomes, and live health of each system.</p>
+  </section>
+  <section class="shell projects-section">
+    <div id="projects-grid" class="projects-grid">
+      <div class="panel project-card loading-card"></div>
+      <div class="panel project-card loading-card"></div>
+      <div class="panel project-card loading-card"></div>
+    </div>
+  </section>
+{% endblock %}
+{% block scripts %}
+  <script src="{% static 'js/projects.js' %}" defer></script>
+{% endblock %}

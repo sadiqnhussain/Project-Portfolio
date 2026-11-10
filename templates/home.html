@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  Portfolio site — Backend Engineer
+{% endblock %}
+{% block content %}
+  <section class="hero shell">
+    <div class="hero-copy">
+      <p class="eyebrow" id="heroRole">Backend Engineer</p><h1 id="heroHeadline">Building reliable backend systems.</h1><p id="heroBio" class="hero-lede">Systems, APIs, data workflows, and operational engineering.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/projects/">View projects →</a><a class="btn btn-ghost" href="/resume/download/">Download resume</a>
+      </div>
+    </div>
+  </section>
+  <section class="shell metrics-section" id="health">
+    <div class="section-heading">
+      <div>
+        <div class="eyebrow">Live telemetry</div><h2>System health</h2>
+      </div><span id="health-time" class="updated">Polling API…</span>
+    </div>
+    <div id="health-grid" class="health-grid">
+      <div class="panel metric-card skeleton"></div>
+      <div class="panel metric-card skeleton"></div>
+      <div class="panel metric-card skeleton"></div>
+      <div class="panel metric-card skeleton"></div>
+    </div>
+    <div id="project-monitoring" class="monitor-strip"></div>
+  </section>
+  <section class="shell section">
+    <div class="section-heading">
+      <div>
+        <div class="eyebrow">Selected systems</div><h2>Featured projects</h2>
+      </div><a class="btn btn-ghost" href="/projects/">All projects →</a>
+    </div>
+    <div id="featured" class="project-grid"></div>
+  </section>
+  <section class="section lab-band">
+    <div class="shell split">
+      <div>
+        <p class="eyebrow">API / ENGINEERING LAB</p><h2>See how the backend works.</h2><p>Trigger a request and inspect validation, service orchestration, and serialization through an interactive backend workflow.</p>
+      </div><a class="btn btn-primary" href="/api-lab/">Open API Lab →</a>
+    </div>
+  </section>
+  <section class="shell section about-home">
+    <div class="about-home-photo">
+      <img id="aboutAvatar" alt="Professional portrait" hidden /><div class="about-home-identity">
+        <strong id="aboutName">Your Name</strong><span id="aboutRole">Backend Engineer</span>
+      </div>
+    </div>
+    <div class="about-home-copy">
+      <p class="eyebrow">ABOUT ME</p><h2 id="aboutTitle">A backend engineer who cares about the whole system.</h2><p id="aboutShort" class="long-copy"></p><a class="btn btn-ghost" href="/about/">Read full profile →</a>
+    </div>
+  </section>
+  <section class="shell section">
+    <p class="eyebrow">EXPERIENCE</p><h2>Career timeline.</h2><div id="experience" class="timeline"></div>
+  </section>
+  <section class="shell section">
+    <p class="eyebrow">EXPERTISE</p><h2>Tools and disciplines.</h2><p class="section-intro">A practical stack across backend engineering, data, infrastructure, and the systems that keep applications dependable.</p>
+    <div id="skills" class="skill-groups"></div>
+  </section>
+  <section class="shell section">
+    <p class="eyebrow">RECOMMENDATIONS</p>
+    <div class="testimonial">
+      <button id="prevRec" aria-label="Previous recommendation">←</button><article id="recommendation"></article><button id="nextRec" aria-label="Next recommendation">→</button>
+    </div>
+    <div id="recDots" class="dots"></div>
+  </section>
+  <section class="shell section cta">
+    <div>
+      <p class="eyebrow">LET'S WORK TOGETHER</p><h2 id="ctaTitle">Let's build something.</h2><p id="ctaText"></p>
+    </div>
+    <div class="actions">
+      <a id="ctaEmail" class="btn btn-primary" href="mailto:you@example.com">Email me</a><a class="btn btn-ghost" href="/contact/">Contact me</a><a class="btn btn-ghost" href="/resume/download/">Download resume</a>
+    </div>
+  </section>
+  <section class="shell section">
+    <div class="section-heading">
+      <div>
+        <div class="eyebrow">Latest systems</div><h2>Recent projects</h2>
+      </div><a class="btn btn-ghost" href="/projects/">Explore all →</a>
+    </div>
+    <div id="recent" class="project-grid"></div>
+  </section>
+{% endblock %}
+{% block scripts %}
+  <script src="{% static 'js/home.js' %}" defer></script>
+{% endblock %}

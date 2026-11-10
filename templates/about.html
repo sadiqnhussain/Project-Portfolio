@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  About Me — MyPortfolio
+{% endblock %}
+{% block content %}
+  <section class="page-head shell">
+    <div class="about-header">
+      <div class="about-header-copy">
+        <p class="eyebrow">ABOUT ME</p><h1 id="name">About</h1><p id="role" class="lede"></p>
+        <div class="profile-contact">
+          <span id="aboutLocation"></span><a id="aboutEmail" href=""></a>
+        </div>
+        <div id="aboutSocial" class="social-actions"></div>
+      </div>
+      <div class="about-header-photo">
+        <img id="aboutAvatar" alt="Professional portrait" hidden />
+      </div>
+    </div>
+  </section>
+  <section class="shell section">
+    <p id="bio" class="long-copy about-copy"></p>
+  </section>
+  <section class="shell section">
+    <p class="eyebrow">EXPERIENCE</p><h2>Career timeline.</h2><div id="aboutExperience" class="timeline"></div>
+  </section>
+  <section class="shell section about-expertise">
+    <p class="eyebrow">EXPERTISE</p><h2>Engineering toolkit.</h2><div id="aboutSkills" class="skill-groups"></div>
+  </section>
+{% endblock %}
+{% block scripts %}
+  <script src="{% static 'js/about.js' %}" defer></script>
+{% endblock %}
