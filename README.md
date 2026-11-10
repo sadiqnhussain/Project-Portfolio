@@ -2,6 +2,9 @@
 
 A Django-powered developer portfolio with a server-rendered UI, a REST API, project case studies, and live health monitoring. Portfolio content is managed through Django Admin; public pages and API responses expose published content.
 
+## live project link.
+https://sadiqnhussain.onrender.com/
+
 ## Features
 
 - Responsive portfolio pages for the home page, projects, profile, and contact information
